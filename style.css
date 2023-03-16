@@ -1,0 +1,246 @@
+.container {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaBr0JKNkXuKDBRjEaaia0fVr3X2cdQVFVDQ&usqp=CAU');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+h4 {
+  line-height: 2px;
+}
+
+/* p {
+  font-size: 13px;
+  color: rgb(132, 85, 24);
+  font-style: oblique; 
+  line-height: 2; jika hanya menuliskan 2 sama saja dengan 2em 
+} */
+
+/* p {
+  color: brown;
+} */
+
+a {
+  font-size: 16px;
+  word-spacing: 8px;
+  /* color: inherit;  // inherit adl color yg diwariskan oleh parent nya, jadi jika cild diberi color inherit maka dia akan menyesuakaikan dgn color parent nya */
+}
+
+/* #ul {
+  color: rgb(65, 65, 86);
+}
+
+.li {
+  color: rgb(166, 129, 200);
+} */
+
+ul#ul li {
+  color: rgb(65, 65, 86);
+}
+
+.li {
+  color: rgb(166, 129, 200);
+}
+
+/* a:hover {
+  color:blueviolet;
+ }
+
+ a:last-child {
+  color: brown;
+ }
+
+ a:first-child {
+  color: rgb(36, 113, 88);
+ }
+
+ a:first-child:hover {
+  color: black;
+ }
+
+ a:nth-child(2) {
+  color: blueviolet;
+ }
+
+ a:nth-child(even) {
+  color: rgb(97, 82, 110);
+ } */
+
+/* Font Styling 
+
+1. font-family => jenis font
+2. font-size => ukuran font ( px, %, em )
+3. font-weight => ketebalan font
+4. font-variant => mengubah font menjadi small caps / menjadi kapital semua
+5. font-style => mengubah font menjadi bercetak miring
+6. line-height => mengatur spasi antar baris ( normal, em, px )
+*/
+
+/* text Styling
+
+1. color => memberi warna pada tulisan
+2. text-align => mengatur format paragraf/text
+3. text-indent => memberi dentasi pada text / text akan bergeser ke kanan dan hanya kalimat pertama
+4. text-decoration => mengatur dekorasi pada text
+5. text-transform => mengubah huruf menjadi huruf besar,kecil/kapital
+6. letter-spacing => mengatur spasi antar huruf
+7. word-spacing => mengatur spasi antar kata
+*/
+
+/* Background 
+
+1. background-position => mengatur posisi gambar pada background
+2. background-repeat => mengatur jenis pengulangan gambar pada background
+
+penulisan background jika di jadikan satu ( penempatannya boleh di balik ) =>
+  background: color url() position repeat;
+*/
+
+/*
+1. :link => style default pada sebuah lik ( a yg memiliki href )
+2. :hover => style dimana ketika kursor berada di atas element/link
+3. :active => style ketika sebuah link di-klik (keadaan aktif)
+4. :visited => style ketika sebuah link pernah dikunjungi sebelumnya
+5. :first-child => memilih elemen pertama dari sebuah parent (elemen pembungkusnya)
+7. :last-child => memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)
+8. :nth-child(n) => memilih elemen ke-n dari sebuah parent (elemen pembungkusnya).
+   n bisa berarti urutan (1), (2)...... atau pola (2n), {3n+2), (4n-1) atau ganjil genap (even) dan (odd)
+9. :first-of-type => memilih elemen pertama dari sebuah tipe tag 
+10.:last-of-type =>  memilih elemen terakhir dari sebuah tipe tag 
+*/
+
+/* Css Specificity => setiap deklarasi css (selector) memiliki berat yang berbeda.
+   Berat tersebut menentukan seberapa spesifik sebuah elemen dapat di pilih oleh selector 
+   
+    cara menghitung nilai Specificity =>
+    0 0 0 0 ( inline, id, class, element )
+
+    contoh :
+
+    ul#ul li {
+    color: blue;    
+    }
+
+    .li {
+      color: blueviolet;
+    }
+   
+    ul#ul li => 0 1 0 2  ( inline, id, class, element )
+
+      .li => 0 0 1 0  ( inline, id, class, element )
+
+    jadi color yang ditampilkan adalah blue karna
+    ul#ul li lebih berat di banding .ul 
+
+*/
+
+/* rgba () ( red green blue alpha */
+
+/* Opacity => untuk membuat element menjadi transparan*/
+
+/* z-index => untuk mengatur posisi depan atau belakang suatu elemen. Value untuk property z-index berupa angka.  */
+
+/* Box-shadow (x, y, blur, color)
+   box-shadow: 5px 5px 5px black
+*/
+
+/* linear-gradient => value untuk background image
+  background-image: linear-gradient ( warna awal , warna akhir )
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(229, 233, 235);
+}
+
+.content {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  font-weight: 500;
+  font-size: 22px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.sideBar {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  left: -100%;
+  width: 260px;
+  padding: 20px 0px;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+
+nav.open .sideBar {
+  left: 0px;
+}
+
+.sideBar-content {
+  font-size: 14px;
+  list-style: none;
+  /* list-style digunakan untuk menghilangkan bulatan di li */
+  border-radius: 8px;
+  color: rgb(129, 140, 144);
+}
+
+li {
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 15px;
+  padding-left: 23px;
+}
+
+li:hover {
+  background-color: rgb(236, 239, 242);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 260px;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.overlay .one {
+  width: 250px;
+  height: 500px;
+  background-color: rgb(220, 224, 222);
+  margin-right: 40px;
+  border-radius: 9px;
+  margin-left: 1%;
+  /* text-align: center; */
+  padding: 10px;
+}
+
+/* .overlay .two {
+  width: 200px;
+  height: 150px;
+  background-color: rgb(220, 224, 222);
+  margin-right: 40px;
+  border-radius: 9px;
+}
+
+.overlay .three {
+  width: 200px;
+  height: 150px;
+  background-color: rgb(220, 224, 222);
+  margin-right: 90px;
+  border-radius: 9px;
+} */
